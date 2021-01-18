@@ -1,0 +1,213 @@
+#include "adc.h"
+#include "user_init.h"
+
+uint8_t ADCComplete=0;
+
+//uint64_t VSample;
+//uint32_t Get122VSample;
+//uint32_t GetV;
+
+void AdcInit(void)
+{
+	LL_GPIO_InitTypeDef         GPIO_InitStruct;	
+	LL_ADC_CommonInitTypeDef    ADC_CommonInitStruct;
+	LL_ADC_InitTypeDef          ADC_InitStruct ;
+
+	//配置引脚为模拟功能
+	//ADC ADC_0 引脚 PC9 
+	GPIO_InitStruct.Pin        = LL_GPIO_PIN_9;
+	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.Pull       = DISABLE;
+	GPIO_InitStruct.RemapPin   = DISABLE;	
+	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+	
+//	//ADC ADC_1 引脚 PC10 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_10;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+//	//ADC ADC_2 引脚 PD11 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_11;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+//	
+//	//ADC ADC_3 引脚 PD0 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_0;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+//	//ADC ADC_4 引脚 PD1 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_1;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+//	
+//	//ADC ADC_5 引脚 PD2 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_2;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+//	//ADC ADC_6 引脚 PA13 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_13;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+//	
+//	//ADC ADC_7 引脚 PD14 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_14;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+//	//ADC ADC_8 引脚 PC7 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_7;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+//	
+//	//ADC ADC_9 引脚 PC8 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_8;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+//	
+//	//ADC ADC_10 引脚 PA15 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_15;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+//	//ADC ADC_11 引脚 PC6 
+//	GPIO_InitStruct.Pin        = LL_GPIO_PIN_6;
+//	GPIO_InitStruct.Mode       = LL_GPIO_MODE_ANALOG;
+//	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+//	GPIO_InitStruct.Pull       = DISABLE;
+//	GPIO_InitStruct.RemapPin   = DISABLE;	
+//	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+	//ADC 时钟设置
+	ADC_CommonInitStruct.AdcClockSource    = LL_RCC_ADC_OPERATION_CLOCK_PRESCALLER_RCHF; //RCHF
+	ADC_CommonInitStruct.AdcClockPrescaler = LL_RCC_ADC_OPERATION_CLOCK_PRESCALER_DIV8; //16分频
+	LL_ADC_CommonInit(&ADC_CommonInitStruct);
+	
+	//ADC 寄存器设置
+	  ADC_InitStruct.ADC_ContinuousConvMode  = LL_ADC_CONV_SINGLE;//单次模式
+    ADC_InitStruct.ADC_AutoMode            = LL_ADC_SINGLE_CONV_MODE_AUTO;//自动
+    ADC_InitStruct.ADC_ScanDirection       = LL_ADC_SEQ_SCAN_DIR_FORWARD;//通道正序扫描
+    ADC_InitStruct.ADC_ExternalTrigConv    = LL_ADC_EXT_TRIGGER_NONE;//禁止触发信号
+		ADC_InitStruct.ADC_SamplingTrigSource  = LL_ADC_TRIG_EXT_PA8;//硬件触发源选择
+    ADC_InitStruct.ADC_OverrunMode 		   	 = LL_ADC_OVR_DATA_OVERWRITTEN;//覆盖上次数据
+    ADC_InitStruct.ADC_WaitMode 		       = LL_ADC_WAIT_MODE_WAIT;//等待 
+    ADC_InitStruct.ADC_Channel_Swap_Wait   = LL_ADC_SAMPLEING_INTERVAL_11_CYCLES;//通道切换等待时间
+    ADC_InitStruct.ADC_Channel_Fast_Time   = LL_ADC_FAST_CH_SAMPLING_TIME_4_ADCCLK;//快速通道采样时间
+    ADC_InitStruct.ADC_Channel_Slow_Time   = LL_ADC_SLOW_CH_SAMPLING_TIME_192_ADCCLK;//慢速通道采样时间
+    ADC_InitStruct.ADC_Oversampling        = DISABLE;//过采样关闭
+    ADC_InitStruct.ADC_OverSampingRatio    = LL_ADC_OVERSAMPLING_8X;//8倍过采样
+    ADC_InitStruct.ADC_OversamplingShift   = LL_ADC_OVERSAMPLING_RESULT_DIV8;//数据右移, /8	
+    LL_ADC_Init(ADC, &ADC_InitStruct);
+		LL_ADC_EnableDMATransfer(ADC);	
+}
+
+void ADC_DMA(uint16_t *buffer, uint32_t length)
+{
+    LL_DMA_InitTypeDef DMA_InitStruct={0};
+		
+		DMA_InitStruct.PeriphAddress = LL_DMA_PERIPHERAL_FUNCTION1;	
+		DMA_InitStruct.MemoryAddress = (uint32_t)buffer;		
+		DMA_InitStruct.Direction = LL_DMA_DIR_PERIPHERAL_TO_RAM;	
+		DMA_InitStruct.MemoryAddressIncMode = LL_DMA_INCREMENTAL_INCREASE;	
+		DMA_InitStruct.DataSize = LL_DMA_BAND_WIDTH_HALF_WORD;
+		DMA_InitStruct.NbData = length - 1;	
+		DMA_InitStruct.Priority = LL_DMA_CHANNEL_PRIORITY_HIGH;		
+		DMA_InitStruct.CircMode = DISABLE;
+		LL_DMA_Init(DMA, &DMA_InitStruct, LL_DMA_CHANNEL_4);		
+				
+		LL_DMA_Enable_DMA(DMA);     
+		LL_DMA_ClearFlag_Finished(DMA, LL_DMA_CHANNEL_4);
+		LL_DMA_Enable_Channel(DMA, LL_DMA_CHANNEL_4);
+    
+}
+
+uint32_t GetVref1p22Sample(void)
+{
+	uint16_t ADCRdresult[4];
+	uint16_t result=0;
+	uint8_t i;
+	LL_RCC_SetADCPrescaler(LL_RCC_ADC_OPERATION_CLOCK_PRESCALER_DIV8);
+  LL_VREF_EnableVREFBuffer(VREF);//使能VREF BUFFER
+	LL_ADC_EnalbleSequencerChannel(ADC, LL_ADC_INTERNAL_CH_VREF);//通道选择VREF
+	ADC_DMA(ADCRdresult,4);	
+	LL_ADC_ClearFlag_EOC(ADC);//清标志			
+  LL_ADC_Enable(ADC);   	 // 启动ADC
+	LL_ADC_StartConversion(ADC);  // 开始转换
+    // 等待转换完成
+	
+	while (!LL_DMA_IsActiveFlag_Finished(DMA, LL_DMA_CHANNEL_4));
+	LL_DMA_ClearFlag_Finished(DMA, LL_DMA_CHANNEL_4);
+	
+	for(i=0;i<4;i++)
+	{
+		result += ADCRdresult[i];
+	}
+	if(i == 4 )
+	result = result/4;
+  LL_ADC_Disable(ADC);    // 关闭ADC
+	LL_ADC_DisableSequencerChannel(ADC, LL_ADC_INTERNAL_CH_VREF);//通道关闭VREF	
+  LL_VREF_DisableVREFBuffer(VREF);//关闭VREF BUFFER			
+    // 转换结果 
+  return result;
+}
+
+uint32_t GetVoltageSample(void)
+{
+	uint16_t ADCRdresult[4];
+	uint16_t result=0;
+	uint8_t i;
+	LL_RCC_SetADCPrescaler(LL_RCC_ADC_OPERATION_CLOCK_PRESCALER_DIV1);
+	LL_ADC_EnalbleSequencerChannel(ADC, LL_ADC_EXTERNAL_CH_0);//通道选择ADC_0
+
+	ADC_DMA(ADCRdresult,4);	
+	LL_ADC_ClearFlag_EOC(ADC);//清标志			
+	LL_ADC_Enable(ADC);   	 // 启动ADC
+	LL_ADC_StartConversion(ADC);  // 开始转换
+   // 等待转换完成
+	while (!LL_DMA_IsActiveFlag_Finished(DMA, LL_DMA_CHANNEL_4));
+	LL_DMA_ClearFlag_Finished(DMA, LL_DMA_CHANNEL_4);
+
+	for(i=0;i<4;i++)
+	{
+		result += ADCRdresult[i];
+	}
+	if(i == 4 )
+	result = result/4;
+  LL_ADC_Disable(ADC);    // 关闭ADC
+	LL_ADC_DisableSequencerChannel(ADC, LL_ADC_EXTERNAL_CH_0);//通道关闭ADC_0		 	 
+    // 转换结果 
+  return result;
+}
+

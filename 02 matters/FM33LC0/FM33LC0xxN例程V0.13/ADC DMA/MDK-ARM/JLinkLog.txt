@@ -1,0 +1,33 @@
+
+T2278 000:539 SEGGER J-Link V5.02f Log File (0001ms, 0329ms total)
+T2278 000:539 DLL Compiled: Oct  2 2015 20:51:34 (0001ms, 0329ms total)
+T2278 000:539 Logging started @ 2020-11-24 11:21 (0001ms, 0329ms total)
+T2278 000:540 JLINK_SetWarnOutHandler(...) (0000ms, 0329ms total)
+T2278 000:540 JLINK_OpenEx(...)
+Firmware: J-Link V9 compiled Oct 25 2018 11:46:07
+Hardware: V9.60
+S/N: 583648125
+Feature(s): GDB, RDI, FlashBP, FlashDL, JFlash, RDDI  returns O.K. (0271ms, 0600ms total)
+T2278 000:811 JLINK_SetErrorOutHandler(...) (0000ms, 0600ms total)
+T2278 000:811 JLINK_ExecCommand("ProjectFile = "E:\SVN项目文档\通用产品\FM402\例程0.12\例程0.12\ADC DMA\MDK-ARM\JLinkSettings.ini"", ...)Device "CORTEX-M0" selected.  returns 0x00 (0052ms, 0652ms total)
+T2278 000:863 JLINK_ExecCommand("Device = FM33LC04X", ...)Device "CORTEX-M0" selected.  returns 0x00 (0000ms, 0652ms total)
+T2278 000:863 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x01 (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetHardwareVersion()  returns 0x17700 (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetDLLVersion()  returns 50206 (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetFirmwareString(...) (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetDLLVersion()  returns 50206 (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetCompileDateTime() (0000ms, 0652ms total)
+T2278 000:863 JLINK_GetFirmwareString(...) (0001ms, 0653ms total)
+T2278 000:864 JLINK_GetHardwareVersion()  returns 0x17700 (0000ms, 0653ms total)
+T2278 000:864 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0001ms, 0654ms total)
+T2278 000:865 JLINK_SetSpeed(2000) (0001ms, 0655ms total)
+T2278 000:866 JLINK_SetResetType(JLINKARM_RESET_TYPE_ADI)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0655ms total)
+T2278 000:866 JLINK_Reset() >0x108 TIF>Found SWD-DP with ID 0x0BB11477 >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF>
+ >0x21 TIF>Found Cortex-M0 r0p0, Little endian. -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU_ReadMem(4 bytes @ 0xE0002000)FPUnit: 4 code (BP) slots and 0 literal slots -- CPU_ReadMem(4 bytes @ 0xE000EDFC) -- CPU_WriteMem(4 bytes @ 0xE000EDFC) -- CPU_ReadMem(4 bytes @ 0xE0001000) -- CPU_WriteMem(4 bytes @ 0xE0001000)CoreSight components:ROMTbl 0 @ E00FF000 -- CPU_ReadMem(16 bytes @ 0xE00FF000) -- CPU_ReadMem(16 bytes @ 0xE000EFF0) -- CPU_ReadMem(16 bytes @ 0xE000EFE0)
+ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 000BB00D SCS -- CPU_ReadMem(16 bytes @ 0xE0001FF0) -- CPU_ReadMem(16 bytes @ 0xE0001FE0)ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 000BB00A DWT -- CPU_ReadMem(16 bytes @ 0xE0002FF0) -- CPU_ReadMem(16 bytes @ 0xE0002FE0)ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 000BB00B FPB -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDFC) -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE000EDFC)
+ -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE000EDFC) -- CPU_WriteMem(4 bytes @ 0xE000ED0C) -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE000EDFC) -- CPU is running -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE0002000) -- CPU_ReadMem(4 bytes @ 0xE000EDFC) -- CPU_ReadMem(4 bytes @ 0xE0001000) -- CPU_WriteMem(4 bytes @ 0xE0001000) (0172ms, 0827ms total)
+T2278 001:038 JLINK_GetId() >0x0D TIF> >0x21 TIF>  returns 0x0BB11477 (0001ms, 0828ms total)
+T2278 001:048 JLINK_GetFirmwareString(...) (0000ms, 0828ms total)
+T2278 313:355 JLINK_Close() -- CPU_ReadMem(4 bytes @ 0xE0001000) -- CPU_WriteMem(4 bytes @ 0xE0001000) -- CPU_WriteMem(4 bytes @ 0xE0001004) >0x42 TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> (0001ms, 0829ms total)
+T2278 313:355  (0001ms, 0829ms total)
+T2278 313:355 Closed (0001ms, 0829ms total)

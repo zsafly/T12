@@ -1,0 +1,28 @@
+
+;; Architecture extensions
+#include weak "..\ARM\ARMv6-M-SYST.ddf"
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 
+;; Used to define address zones within the ARM address space (Memory). 
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;         Name             AdrSpace    StartAdr    EndAdr      AccType   Width 
+Memory =  Periph1          Memory      0x40000000  0x40001BFF  W  
+Memory =  Periph2          Memory      0x40002000  0x4001FFFF  W 
+Memory =  RAM1             Memory      0x40001C00  0x40001FFF  RW  
+Memory =  SystemSFR        Memory      0xE0000000  0xE007FFFF  W  
+Memory =  Flash            Memory      0x00000000  0x0003FFFF  R  
+Memory =  RAM              Memory      0x20000000  0x2000BFFF  RW 
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = FM33A0XXER.svd

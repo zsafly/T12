@@ -1,0 +1,5 @@
+1 fm33lc0xx_ll_comp.h   LL_COMP_SetComper2InterruptEdge 函数修改移位BUG
+2 fm33lc0xx_ll_rcc.c    各获取频率函数增加default，增加可靠性
+3fm33lc0xx_ll_lcd.c     LL_LCD_DisplayFreq函数switch增加default，增加可靠性
+4 fm33lc0xx_ll_lcd.c    LL_LCD_FlickTime函数switch增加default，增加可靠性
+5 例程 ADC中断    GetVoltageSample函数增加ADCComplete=0;

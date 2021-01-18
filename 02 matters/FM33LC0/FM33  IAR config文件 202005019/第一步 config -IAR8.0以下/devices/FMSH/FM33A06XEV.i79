@@ -1,0 +1,29 @@
+[FILEFORMAT]
+rev=1.6
+
+[CHIP]
+name=FM33A06XEV
+endiansupport=le
+thumbsupport=true
+armsupport=false
+fpu=None
+SIMD=false
+
+JTAG=false
+SWD=true
+SWO_TraceD0=false
+
+[CORE]
+name=Cortex-M0+
+
+[DDF FILE]
+name=FMSH\FM33A06XEV.ddf
+
+[LINKER FILE]
+name=$TOOLKIT_DIR$\config\linker\FMSH\FM33A06XEV.icf
+
+[FLASH LOADER]
+
+little=$TOOLKIT_DIR$\config\flashloader\FMSH\FM33A06XEV.board
+
+
