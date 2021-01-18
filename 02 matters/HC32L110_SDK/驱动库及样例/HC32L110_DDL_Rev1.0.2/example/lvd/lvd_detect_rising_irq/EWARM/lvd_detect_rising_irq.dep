@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>1023522639</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\inc\clk.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\mcu\common\system_hc32l110.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\output\release\Obj\interrupts_hc32l110.o</file>
+            <file>$PROJ_DIR$\output\release\Obj\interrupts_hc32l110.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\lvd_detect_rising_irq.pbd</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0plus.h</file>
+            <file>$PROJ_DIR$\output\release\Obj\lvd.o</file>
+            <file>$PROJ_DIR$\output\release\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\..\..\..\..\mcu\common\base_types.h</file>
+            <file>$PROJ_DIR$\..\source\ddl_device.h</file>
+            <file>$PROJ_DIR$\output\release\Obj\lvd.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\clk.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\mcu\common\HC32L110.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\inc\gpio.h</file>
+            <file>$PROJ_DIR$\output\release\Exe\lvd_detect_rising_irq.out</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Include\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\output\release\Obj\ddl.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\output\release\Obj\system_hc32l110.o</file>
+            <file>$PROJ_DIR$\output\release\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\output\release\Obj\startup_hc32l110.o</file>
+            <file>$PROJ_DIR$\output\release\Obj\clk.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\gpio.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\system_hc32l110.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\ddl.pbi</file>
+            <file>$PROJ_DIR$\output\release\Obj\main.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\inc\lvd.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\inc\interrupts_hc32l110.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\inc\ddl.h</file>
+            <file>$PROJ_DIR$\..\Readme.txt</file>
+            <file>$PROJ_DIR$\..\source\main.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\src\gpio.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\src\clk.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\src\interrupts_hc32l110.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\mcu\common\system_hc32l110.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\src\ddl.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\driver\src\lvd.c</file>
+            <file>$PROJ_DIR$\startup_hc32l110.s</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6 15 1 10 40 3 0 2 25 27 21 29 20 18 26 39 22 14 5 19 4 11 24 38</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\driver\src\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 34</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 25 26 6 18 21 29 20 10 39 3 15 0 1 2 27 40 14 5 22 19 4 11 24</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\driver\src\clk.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6 15 1 10 3 0 2 25 27 39 21 29 20 18 26 40 14 5 22 19 4 11 24</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\driver\src\interrupts_hc32l110.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 7</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 5 2 6 0 25 27 1 10 14 22 29 20 18 26 39 21 3 15 19 4 11 24 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\mcu\common\system_hc32l110.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 2 6 0 25 27 1 10 21 5 29 20 18 26 40 19 4 11 24 3 15 39 14 22</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\driver\src\ddl.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 36</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 25 10 6 21 18 4 24 3 15 19 11 14 5 22 0 29 1 20 2 27 26 39 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\driver\src\lvd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39 22 19 14 10 6 18 11 5 25 4 24 40 21 3 15 0 29 1 20 2 27 26 38</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_hc32l110.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>debug</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

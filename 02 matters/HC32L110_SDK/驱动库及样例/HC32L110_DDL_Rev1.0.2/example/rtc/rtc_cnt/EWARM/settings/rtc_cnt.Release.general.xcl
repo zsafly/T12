@@ -1,0 +1,13 @@
+"F:\软件\IAR\IAR For ARM\arm\bin\armproc.dll" 
+
+"F:\软件\IAR\IAR For ARM\arm\bin\armjlink2.dll" 
+
+"C:\Users\Administrator\Desktop\HC32Lx\HC32L1x_SDK\HC32L110_SDK\驱动库及样例\HC32L110_DDL_Rev1.0.2\example\rtc\rtc_cnt\EWARM\output\release\Exe\rtc_cnt.out" 
+
+--plugin "F:\软件\IAR\IAR For ARM\arm\bin\armbat.dll" 
+
+--flash_loader "C:\Users\Administrator\Desktop\HC32Lx\HC32L1x_SDK\HC32L110_SDK\驱动库及样例\HC32L110_DDL_Rev1.0.2\example\rtc\rtc_cnt\EWARM\flashloader\HC32L110.board" 
+
+
+
+
