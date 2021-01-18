@@ -1,0 +1,13 @@
+"F:\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
+
+"F:\IAR Systems\Embedded Workbench 8.3\arm\bin\armjlink2.dll" 
+
+"G:\T12\04 software\hc32l110c6pa_template\example\EWARM\output\release\Exe\hc32l110c6pa.out" 
+
+--plugin="F:\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
+
+--flash_loader="G:\T12\04 software\hc32l110c6pa_template\example\EWARM\config\flashloader\HC32L110C6PA.board" 
+
+
+
+

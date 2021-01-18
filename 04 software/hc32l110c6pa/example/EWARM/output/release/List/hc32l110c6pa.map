@@ -1,0 +1,225 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  18/Jan/2021  15:49:47
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\Exe\hc32l110c6pa.out
+#    Map file     =
+#        G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\List\hc32l110c6pa.map
+#    Command line =
+#        -f C:\Users\11\AppData\Local\Temp\EW8456.tmp ("G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\Obj\main.o"
+#        "G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\Obj\startup_hc32l110c6pa.o"
+#        "G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\Obj\system_hc32l110c6pa.o"
+#        --no_out_extension -o "G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\Exe\hc32l110c6pa.out"
+#        --map "G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\output\release\List\hc32l110c6pa.map"
+#        --config "G:\T12\04
+#        software\hc32l110c6pa_template\example\EWARM\config\hc32l110c6pa.icf"
+#        --semihosting --entry __iar_program_start --redirect
+#        __write=__write_buffered --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7fff] { ro };
+define block CSTACK with size = 256, alignment = 8 { };
+define block HEAP with size = 256, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'0fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0xc0
+  .intvec          ro code          0x0   0xc0  startup_hc32l110c6pa.o [1]
+                                 - 0xc0   0xc0
+
+"P1":                                    0x16a
+  .text            ro code         0xc0   0x3c  zero_init3.o [3]
+  .text            ro code         0xfc   0x38  system_hc32l110c6pa.o [1]
+  .text            ro code        0x134   0x28  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x15c   0x28  data_init.o [3]
+  .iar.init_table  const          0x184   0x10  - Linker created -
+  .text            ro code        0x194   0x1e  cmain.o [3]
+  .text            ro code        0x1b2    0x4  low_level_init.o [2]
+  .text            ro code        0x1b6    0x4  main.o [1]
+  .text            ro code        0x1ba    0x8  exit.o [2]
+  .text            ro code        0x1c2    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1c4    0xa  cexit.o [3]
+  .text            ro code        0x1ce    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1d0   0x14  exit.o [4]
+  .text            ro code        0x1e4    0xc  cstartup_M.o [3]
+  .text            ro code        0x1f0    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1f2    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1f4    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1f6    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1f8    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1fa    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1fc    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x1fe    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x200    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x202    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x204    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x206    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x208    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x20a    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x20c    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x20e    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x210    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x212    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x214    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x216    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x218    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x21a    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x21c    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x21e    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x220    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x222    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x224    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x226    0x2  startup_hc32l110c6pa.o [1]
+  .text            ro code        0x228    0x2  startup_hc32l110c6pa.o [1]
+  .rodata          const          0x22a    0x0  zero_init3.o [3]
+                                - 0x22a  0x16a
+
+"P2", part 1 of 2:                         0x4
+  .bss             zero     0x2000'0000    0x4  system_hc32l110c6pa.o [1]
+                          - 0x2000'0004    0x4
+
+"P2", part 2 of 2:                       0x100
+  CSTACK                    0x2000'0008  0x100  <Block>
+    CSTACK         uninit   0x2000'0008  0x100  <Block tail>
+                          - 0x2000'0108  0x100
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+        0x22a       0x7fff  0x7dd6
+  0x2000'0004  0x2000'0007     0x4
+  0x2000'0108  0x2000'0fff   0xef8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4:
+          0x2000'0000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+G:\T12\04 software\hc32l110c6pa_template\example\EWARM\output\release\Obj: [1]
+    main.o                        4
+    startup_hc32l110c6pa.o      294
+    system_hc32l110c6pa.o        56                 4
+    -------------------------------------------------
+    Total:                      354                 4
+
+dl6M_tlf.a: [2]
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
+
+rt6M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    zero_init3.o                 60
+    -------------------------------------------------
+    Total:                      152
+
+shb_l.a: [4]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        16      256
+-----------------------------------------------------
+    Grand Total:                538       16      260
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base         0x184         --   Gb  - Linker created -
+.iar.init_table$$Limit        0x194         --   Gb  - Linker created -
+?main                         0x195        Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0108         --   Gb  - Linker created -
+Region$$Table$$Base           0x184         --   Gb  - Linker created -
+Region$$Table$$Limit          0x194         --   Gb  - Linker created -
+SystemCoreClock         0x2000'0000   0x4  Data  Gb  system_hc32l110c6pa.o [1]
+SystemCoreClockUpdate          0xfd   0x8  Code  Gb  system_hc32l110c6pa.o [1]
+SystemInit                    0x105  0x1e  Code  Gb  system_hc32l110c6pa.o [1]
+__cmain                       0x195        Code  Gb  cmain.o [3]
+__exit                        0x1d1  0x14  Code  Gb  exit.o [4]
+__iar_data_init3              0x15d  0x28  Code  Gb  data_init.o [3]
+__iar_program_start           0x1e5        Code  Gb  cstartup_M.o [3]
+__iar_zero_init3               0xc1  0x3c  Code  Gb  zero_init3.o [3]
+__low_level_init              0x1b3   0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0        Data  Gb  startup_hc32l110c6pa.o [1]
+_call_main                    0x1a1        Code  Gb  cmain.o [3]
+_exit                         0x1c5        Code  Gb  cexit.o [3]
+_main                         0x1af        Code  Gb  cmain.o [3]
+exit                          0x1bb   0x8  Code  Gb  exit.o [2]
+main                          0x1b7   0x4  Code  Gb  main.o [1]
+
+
+[1] = G:\T12\04 software\hc32l110c6pa_template\example\EWARM\output\release\Obj
+[2] = dl6M_tlf.a
+[3] = rt6M_tl.a
+[4] = shb_l.a
+
+  538 bytes of readonly  code memory
+   16 bytes of readonly  data memory
+  260 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
